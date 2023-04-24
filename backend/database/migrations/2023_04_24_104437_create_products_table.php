@@ -17,8 +17,8 @@ class CreateProductsTable extends Migration
             $table->id('id');
             $table->foreignId('category_id')->constrained();
             $table->string('name');
-            $table->timestamps('created');
-            $table->timestamps('updated');
+            $table->timestamps('created_at');
+            $table->timestamps('updated_at');
         });
     }
 

@@ -11,7 +11,7 @@ class Categories extends Model
 
     protected $fillable = [
         'name',
-        'created',
-        'updated',
+        'created_at',
+        'updated_at',
     ];    
 }
