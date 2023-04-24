@@ -1,2 +1,2 @@
-# sodresantoro-teste-php-api
-Sodre Santoro - Teste API em PHP# sodresantoro-teste-php-api
+# teste-php-api-sodresantoro
+Sodre Santoro - Teste API em PHP# teste-php-api-sodresantoro
