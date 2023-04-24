@@ -1,26 +1,47 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <NavbarComponent :logo="logo_src" :alt="app_name" />
+    <div class="container">
+      <router-view></router-view>
+    </div>
+    <FooterComponent />
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavbarComponent from './components/NavbarComponent'
+import FooterComponent from './components/FooterComponent'
 export default {
-  name: 'App',
+  data: function() {
+    return {
+      logo_src: "/img/logo.png",
+      app_name: "Sodre Santoro"
+    }
+  },
   components: {
-    HelloWorld
+    NavbarComponent,
+    FooterComponent
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .main-container {
+    margin: 50px;
+    min-height: 250px;
+  }
+  .container {
+    height: 100vh;
+  }
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #333;
+  }
 </style>
