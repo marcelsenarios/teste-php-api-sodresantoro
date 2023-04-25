@@ -1,19 +1,5 @@
 <template>
   <table class="table">
-      <!-- <thead>
-          <tr>
-              <th>ID</th>
-              <th>Produto</th>
-              <th>Categoria</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr v-for="product in data" :key="product.id">
-              <td>{{product.id}}</td>
-              <td>{{product.name}}</td>
-              <td>{{product.category_id}}</td>
-          </tr>
-      </tbody> -->
       <thead>
           <tr>
               <th v-for="th in thList" :key="th">{{ th }}</th>
@@ -73,8 +59,9 @@ export default {
     .table {
         width: 100%;
         min-width: 400px;
+        max-width: 1400px;
         border-collapse: collapse;
-        margin: 25px 0;
+        margin: 25px auto;
         font-size: 0.9em;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
