@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>Footer</p>
+        <p>&copy; 2023 - @marcelsenarios</p>
     </footer>
 </template>
 
@@ -9,7 +9,3 @@
         name: "FooterComponent"
     }
 </script>
-
-<style scoped>
-
-</style>
