@@ -17,7 +17,7 @@
   
   <style scoped>
     #nav {
-      background-color: #e2e2e2;
+      background-color: #004c6d;
       border-bottom: 4px solid #111;
       padding: 15px 50px;
       display: flex;
@@ -33,7 +33,7 @@
       height: 40px;
     }
     #nav a {
-      color: #888;
+      color: #fff;
       text-decoration: none;
       margin: 12px;
       transition: .5s;
