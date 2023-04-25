@@ -1,6 +1,6 @@
 <template>
   <table class="table">
-      <thead>
+      <!-- <thead>
           <tr>
               <th>ID</th>
               <th>Produto</th>
@@ -8,20 +8,31 @@
           </tr>
       </thead>
       <tbody>
-          <tr v-for="product in products" :key="product.id">
+          <tr v-for="product in data" :key="product.id">
               <td>{{product.id}}</td>
               <td>{{product.name}}</td>
               <td>{{product.category_id}}</td>
           </tr>
-      </tbody>
+      </tbody> -->
+      <thead>
+          <tr>
+              <th v-for="th in thList" :key="th">{{ th }}</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr v-for="td in tdList" :key="td.id">
+              <td v-for="item in td" :key="td.id+item">{{ item }}</td>
+          </tr>
+      </tbody>      
   </table>
 </template>
 
 <script>
-import { ref } from 'vue';
+// import { ref } from 'vue';
 
 export default {
   name: 'TableComponent',
+    props: ['thList', 'tdList'],
   // data() {
   //   return {
   //     products: null
@@ -41,25 +52,25 @@ export default {
   //   },
   // }
 
-  setup() {
-      // MOCK
-      const products = ref([
-          { id: '1', name: 'Mochila', category_id: '10'},
-          { id: '2', name: 'Notebook', category_id: '8'},
-          { id: '3', name: 'Livro de PHP', category_id: '3'},
-          { id: '4', name: 'Cerveja Bud', category_id: '1'},
-          { id: '5', name: 'Vinho do Porto', category_id: '1'}
-      ]);
+//   setup() {
+//       // MOCK
+//       const products = ref([
+//           { id: '1', name: 'Mochila', category_id: '10'},
+//           { id: '2', name: 'Notebook', category_id: '8'},
+//           { id: '3', name: 'Livro de PHP', category_id: '3'},
+//           { id: '4', name: 'Cerveja Bud', category_id: '1'},
+//           { id: '5', name: 'Vinho do Porto', category_id: '1'}
+//       ]);
 
-      return {
-          products
-      };
-  }
+//       return {
+//           products
+//       };
+//   }
 }
 </script>
 
 <style scoped>
-.table {
+    .table {
         width: 100%;
         min-width: 400px;
         border-collapse: collapse;

@@ -1,6 +1,6 @@
 <template>
-   <div id="home">
-
+   <div class="home">
+        <h1>Olá, seja bem vindo ao desafio Teste PHP Api da Sodré Santoro!</h1>
    </div>
 </template>
 
@@ -11,5 +11,11 @@ export default {
 </script>
 
 <style>
-
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}    
 </style>

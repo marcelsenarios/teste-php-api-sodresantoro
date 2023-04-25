@@ -31,12 +31,10 @@ export default {
     margin: 0;
     box-sizing: border-box;
   }
-  .main-container {
+  .container {
     margin: 50px;
     min-height: 250px;
-  }
-  .container {
-    height: 100vh;
+    height: calc(100vh - 150px);
   }
   h1 {
     text-align: center;
