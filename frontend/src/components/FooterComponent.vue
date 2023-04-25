@@ -9,3 +9,12 @@
         name: "FooterComponent"
     }
 </script>
+
+<style scoped>
+  footer {
+    background: #004c6d;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+</style>

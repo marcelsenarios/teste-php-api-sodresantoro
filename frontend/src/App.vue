@@ -77,20 +77,15 @@ export default {
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
   }
   .container {
+    width: 100%;
+    min-width: 400px;
+    max-width: 1400px;
+    border-collapse: collapse;
     margin: 0 auto;
-    height: calc(100vh - 153px);
+    height: calc(100vh - 173px);
   }
   h1 {
-    text-align: center;
-    font-size: 42px;
-    margin: 30px 0;
+    font-size: 2rem;
     color: #333;
-  }
-
-  footer {
-    background: #000;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
   }
 </style>

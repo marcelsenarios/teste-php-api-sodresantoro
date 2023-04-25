@@ -1,29 +1,36 @@
 <template>
-    <h1>Lista de produtos:</h1>
-    <TableComponent :thList="['ID','Produto','Categoria']" :tdList="products"/>
+    <HeadTableComponent :label="label" :button="button" />
+    <TableComponent :thList="headList" :tdList="products"/>
 </template>
   
   <script>
   import TableComponent from '../components/TableComponent.vue';
-  import { ref } from 'vue';
+  import HeadTableComponent from '../components/HeadTableComponent.vue';
+
   export default {
     name: 'ProductsComponent',
     components: {
-      TableComponent
+      TableComponent,
+      HeadTableComponent
     },
-    setup() {
-      // MOCK
-      const products = ref([
-          { id: '1', name: 'Mochila', category_id: '2'},
-          { id: '2', name: 'Notebook', category_id: '2'},
-          { id: '3', name: 'Livro de PHP', category_id: '3'},
-          { id: '4', name: 'Cerveja Bud', category_id: '1'},
-          { id: '5', name: 'Vinho do Porto', category_id: '1'}
-      ]);
 
+    data() {
       return {
-          products
-      };
-  }
+        products: [],
+        headList: ['ID','Categoria', 'Produto', 'Data cadastro', 'Data atualização'],
+        label: "Lista de produtos",
+        button: "Cadastrar"
+      }
+    },
+    methods: {
+      async getProducts() {
+        const res = await fetch("http://127.0.0.1:8000/api/products");
+        const finalRes = await res.json();
+        this.products = finalRes;
+      }
+    },
+    mounted() {
+      this.getProducts()
+    }
   }
   </script>
